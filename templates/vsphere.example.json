@@ -1,0 +1,9 @@
+{
+    "vcenter-server": "vcsa.example.com",  
+    "vsphere-cluster": "Cluster",
+    "vsphere-datastore": "Datastore",
+    "vsphere-folder": "Templates",
+    "vsphere-network": "Network",
+    "vsphere-password": "hunter2",
+    "vsphere-user": "packer@vsphere.local"
+  }

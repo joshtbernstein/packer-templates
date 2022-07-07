@@ -1,0 +1,8 @@
+{
+    "os-autounattend": "answer_files/server2019core/autounattend.xml",
+    "os-iso-checksum": "none",
+    "os-iso-url": "https://go.microsoft.com/fwlink/p/?LinkID=2195167&clcid=0x409&culture=en-us&country=US",
+    "os-unattend": "answer_files/server2019core/unattend.xml",
+    "vm-name": "Server2019Core",
+    "vm-os-type": "windows2019srv_64Guest"
+  }
