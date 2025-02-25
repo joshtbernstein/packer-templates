@@ -22,5 +22,18 @@ To build a Window Server 2019 template VM, run `packer build -var-file=templates
 
 To build Window Server 2019 Core template VM, run `packer build -var-file=templates/vsphere.json -var-file=templates/windows-server-2019core.json templates/windows-vsphere.json`.
 
+# Links
+
+## Eval ISO Links
+* [Windows 10](https://www.microsoft.com/en-us/evalcenter/download-windows-10-enterprise)
+* [Windows 11](https://www.microsoft.com/en-us/evalcenter/download-windows-11-enterprise)
+* [Server 2019](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
+* [Server 2022](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022)
+* [Server 2025](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025)
+
+## Other Links
+* [List](https://knowledge.broadcom.com/external/article/321876/determine-the-guest-os-from-a-vm-configu.html) of Guest OS ID values (guest_os_type)
+* [Convert an evaluation version to a retail version](https://learn.microsoft.com/en-us/windows-server/get-started/upgrade-conversion-options#convert-an-evaluation-version-to-a-retail-version)
+
 # Contributing
 Issues (or suggestions and questions) and PRs are welcome!
