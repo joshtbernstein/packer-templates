@@ -20,6 +20,8 @@
 		"floppy_files": [
 		  "scripts/sysprep.cmd",
 		  "scripts/winrm.ps1",
+		  "scripts/enable_winrm.ps1",
+		  "scripts/disable_winrm.ps1",
 		  "{{user `os-autounattend`}}",
 		  "{{user `os-unattend`}}"
 		],
@@ -89,8 +91,6 @@
 	  },
 	  {
 		"inline": [
-		  "Invoke-Expression (Invoke-WebRequest -UseBasicParsing -Uri 'https://raw.githubusercontent.com/joshtbernstein/Undo-WinRMConfig/remove_certificate/Undo-WinRMConfig.ps1')",
-		  "Start-Sleep -Seconds 10",
 		  "Remove-item -Path $env:WINDIR\\Panther\\unattend.xml -ErrorAction Continue",
 		  "DISM /Online /Cleanup-Image /StartComponentCleanup /Quiet",
 		  "Stop-Service -Name VMTools",

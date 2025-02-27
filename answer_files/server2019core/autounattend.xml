@@ -118,7 +118,7 @@
             </AutoLogon>
             <FirstLogonCommands>
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>powershell -ExecutionPolicy Bypass -File A:\WinRM.ps1</CommandLine>
+                    <CommandLine>Powershell -ExecutionPolicy Bypass -File A:\enable_winrm.ps1</CommandLine>
                     <Description>Enable WinRM</Description>
                     <Order>1</Order>
                 </SynchronousCommand>

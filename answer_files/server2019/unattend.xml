@@ -52,19 +52,14 @@
                     <Order>1</Order>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>Powershell -Command Invoke-WebRequest -UseBasicParsing -Uri 'https://raw.githubusercontent.com/ansible/ansible/devel/examples/scripts/ConfigureRemotingForAnsible.ps1' -OutFile $env:TEMP\ConfigureRemoting.ps1</CommandLine>
-                    <Description>Download WinRM Script</Description>
+                    <CommandLine>Powershell -Command New-Item -Path WSMan:\LocalHost\Listener -Transport HTTPS -Address * -CertificateThumbPrint $(New-SelfSignedCertificate -CertstoreLocation Cert:\LocalMachine\My -Subject $env:COMPUTERNAME).Thumbprint -Force</CommandLine>
+                    <Description>Setup HTTPS WinRM Listener</Description>
                     <Order>2</Order>
                 </SynchronousCommand>
                 <SynchronousCommand wcm:action="add">
-                    <CommandLine>Powershell -ExecutionPolicy Bypass -File $env:TEMP\ConfigureRemoting.ps1</CommandLine>
-                    <Description>Run WinRM Script</Description>
+                    <CommandLine>Powershell -Command New-NetFirewallRule -DisplayName "Windows Remote Management (HTTPS-In)" -LocalPort 5986 -Protocol TCP -Profile Private -Program System -Group "Windows Remote Management"</CommandLine>
+                    <Description>Download WinRM Script</Description>
                     <Order>3</Order>
-                </SynchronousCommand>
-                <SynchronousCommand wcm:action="add">
-                    <CommandLine>Powershell -Command Remove-Item -Path $env:TEMP\ConfigureRemoting.ps1</CommandLine>
-                    <Description>Remove WinRM Script</Description>
-                    <Order>4</Order>
                 </SynchronousCommand>
             </FirstLogonCommands>
             <OOBE>
