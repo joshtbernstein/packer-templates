@@ -19,7 +19,6 @@
 		"firmware": "efi",
 		"floppy_files": [
 		  "scripts/sysprep.cmd",
-		  "scripts/winrm.ps1",
 		  "scripts/enable_winrm.ps1",
 		  "scripts/disable_winrm.ps1",
 		  "{{user `os-autounattend`}}",
