@@ -39,14 +39,14 @@
 		  }
 		],
 		"password": "{{user `vsphere-password`}}",
-		"RAM": "2048",
+		"RAM": "4096",
 		"RAM_hot_plug": true,
 		"remove_cdrom": false,
 		"shutdown_command": "A:\\sysprep.cmd",
 		"shutdown_timeout": "5m",
 		"storage": [
 		  {
-			"disk_size": 20000,
+			"disk_size": 40000,
 			"disk_thin_provisioned": true
 		  }
 		],
